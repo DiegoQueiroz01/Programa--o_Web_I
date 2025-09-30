@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tabela 8x8 Estilizada</title>
+  <style>
+    :root{
+      --bg:#fdc612;
+      --card:#0b1220;
+      --accent:#e2f020;
+      --muted:#94a3b8;
+      --odd:#0f172b;
+      --even:#0b1830;
+      --header:#071026;
+      --text:#e6eef6;
+      --highlight: rgba(255,255,255,0.06);
+    }
+
+    /* página */
+    body{
+      margin:30px;
+      font-family: "Segoe UI", Times 'Times New Roman', Times, serif, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg,#022a50 0%, #01010e 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      max-width:940px;
+      margin:0 auto;
+      background: linear-gradient(180deg,var(--card), rgba(197, 138, 11, 0.9));
+      padding:18px;
+      border-radius:12px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    h1{
+      margin:0 0 12px 0;
+      font-weight:600;
+      color:var(--accent);
+      font-size:20px;
+      letter-spacing:0.2px;
+    }
+
+    p.lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* tabela */
+    table.stylish {
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:8px;
+      table-layout:fixed;
+    }
+
+    /* cabeçalho */
+    table.stylish thead th{
+      background: linear-gradient(90deg,var(--header), rgba(224, 193, 13, 0.9));
+      color:var(--accent);
+      text-align:center;
+      padding:12px 8px;
+      font-weight:700;
+      font-size:13px;
+      border-bottom: 2px solid rgba(255,255,255,0.03);
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+    }
+
+    /* células */
+    table.stylish tbody td{
+      padding:10px 8px;
+      font-size:14px;
+      color:var(--text);
+      border-bottom:1px dashed rgba(255,255,255,0.03);
+      text-align:center;
+      vertical-align:middle;
+      transition: background .18s, transform .08s;
+      word-break:break-word;
+    }
+
+    
+    table.stylish tbody tr:nth-child(odd){ background: linear-gradient(90deg,var(--odd), rgba(6,13,28,0.3)); }
+    table.stylish tbody tr:nth-child(even){ background: linear-gradient(90deg,var(--even), rgba(5,12,24,0.3)); }
+
+    table.stylish tbody td:nth-child(1){ font-weight:700; color:var(--accent); }
+    table.stylish tbody td:nth-child(2){ background: rgba(79,209,197,0.02); }
+    table.stylish tbody td:nth-child(4){ background: rgba(159,122,234,0.03); }
+    table.stylish tbody td:nth-child(6){ background: rgba(255,199,102,0.02); }
+
+    table.stylish tbody tr:hover td{
+      background: var(--highlight);
+      transform: translateY(-2px);
+    }
+
+   
+    table.stylish tbody tr.total{
+      background: linear-gradient(90deg, rgba(79,209,197,0.06), rgba(79,209,197,0.02));
+      font-weight:700;
+      color: #0b1b1b;
+    }
+
+
+    .table-wrap{
+      overflow:auto;
+      border-radius:8px;
+      padding:4px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    }
+
+
+    caption{
+      caption-side:bottom;
+      padding-top:8px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:right;
+    }
+
+    @media (max-width:520px){
+      table.stylish thead th, table.stylish tbody td{ padding:8px 6px; font-size:12px; }
+      h1{ font-size:18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tabela 8 × 8 — Exemplo</h1>
+    <p class="lead">Exemplo com cabeçalho, linhas alternadas, destaques por coluna e efeito hover. A tabela abaixo representa a tabuada.</p>
+
+    <div class="table-wrap">
+      <table class="stylish" aria-label="Tabela exemplo 8 por 8">
+        <thead>
+          <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+          <tr><td>2</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td></tr>
+          <tr><td>3</td><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td><td>18</td><td>21</td></tr>
+          <tr><td>4</td><td>4</td><td>8</td><td>12</td><td>16</td><td>20</td><td>24</td><td>28</td></tr>
+          <tr><td>5</td><td>5</td><td>10</td><td>15</td><td>20</td><td>25</td><td>30</td><td>35</td></tr>
+          <tr><td>6</td><td>6</td><td>12</td><td>18</td><td>24</td><td>30</td><td>36</td><td>42</td></tr>
+          <tr><td>7</td><td>7</td><td>14</td><td>21</td><td>28</td><td>35</td><td>42</td><td>49</td></tr>
+          <tr class="total"><td>8</td><td>8</td><td>16</td><td>24</td><td>32</td><td>40</td><td>48</td><td>56</td></tr>
+        </tbody>
+        <caption>Exemplo: tabuada</caption>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
