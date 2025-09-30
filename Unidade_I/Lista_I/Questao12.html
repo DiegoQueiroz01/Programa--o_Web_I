@@ -1,0 +1,63 @@
+12. Crie um documento HTML5 que implemente uma lista de nomes de pessoas. Utilize
+componentes apropriados que permitam a busca de pessoas específicas nesta lista.
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Pessoas com Busca</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input {
+      padding: 8px;
+      margin-bottom: 15px;
+      width: 250px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 6px;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Pessoas</h1>
+  <input type="search" id="busca" placeholder="Digite um nome para buscar..." onkeyup="filtrarLista()">
+
+  <ul id="listaNomes">
+    <li>Ana Souza</li>
+    <li>Bruno Lima</li>
+    <li>Carla Mendes</li>
+    <li>Diego Queiroz</li>
+    <li>Fernanda Alves</li>
+    <li>Gabriel Rocha</li>
+    <li>Mariana Silva</li>
+    <li>Paulo Henrique</li>
+  </ul>
+
+  <script>
+    function filtrarLista() {
+      let input = document.getElementById("busca");
+      let filtro = input.value.toLowerCase();
+      let ul = document.getElementById("listaNomes");
+      let li = ul.getElementsByTagName("li");
+
+      for (let i = 0; i < li.length; i++) {
+        let nome = li[i].textContent || li[i].innerText;
+        if (nome.toLowerCase().indexOf(filtro) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

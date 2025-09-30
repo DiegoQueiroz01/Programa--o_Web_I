@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 400px;
+    }
+    td {
+      padding: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+    }
+    .botao {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Produto</h1>
+
+  <form action="#" method="post">
+    <table border="1">
+      <tr>
+        <td><label for="codigo">Código:</label></td>
+        <td><input type="text" id="codigo" name="codigo" required></td>
+      </tr>
+      <tr>
+        <td><label for="descricao">Descrição:</label></td>
+        <td><input type="text" id="descricao" name="descricao" required></td>
+      </tr>
+      <tr>
+        <td><label for="preco">Preço (R$):</label></td>
+        <td><input type="number" id="preco" name="preco" step="0.01" min="0" required></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="botao">
+          <input type="submit" value="Cadastrar">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

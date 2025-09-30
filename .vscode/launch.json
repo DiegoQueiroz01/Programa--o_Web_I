@@ -1,0 +1,14 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open <!DOCTYPE html>.html",
+            "file": "/home/diego-santos-queiroz/Documentos/IFBA/BSI/4ºSemestre/Programação_Web_I/Unidade_I/Lista_I/<!DOCTYPE html>.html"
+        }
+    ]
+}
