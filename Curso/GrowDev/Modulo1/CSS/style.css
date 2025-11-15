@@ -17,6 +17,10 @@ h1{
 main{
     padding: 0px 25px 0px 25px;
 }
+table{
+    padding: 5px;
+    margin: 10px;
+}
 footer{
     font-size: 10px;
     text-align: left;
