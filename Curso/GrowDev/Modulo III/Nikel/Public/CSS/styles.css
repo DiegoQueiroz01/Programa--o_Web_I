@@ -15,6 +15,11 @@ header{
 .color-secundary{
     color: #4c79d3;
 }
+.icon-detail{
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 .text-login{
     color: white;
     font-size: 20px;
